@@ -9,6 +9,7 @@ struct UartPins {
 
 struct DisplayPins {
     int mosi;
+    int miso;
     int sclk;
     int dc;
     int rst;
@@ -16,6 +17,13 @@ struct DisplayPins {
 };
 
 struct GyroPins {
+    int cs;
+    int sck;
+    int miso;
+    int mosi;
+};
+
+struct SDPins {
     int cs;
     int sck;
     int miso;

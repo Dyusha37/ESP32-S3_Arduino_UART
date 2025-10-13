@@ -76,4 +76,6 @@ void ArduinoUno::printValues(){
   display.display();	
 }
 
+void ArduinoUno::loggerSendData(){}
+
 #endif

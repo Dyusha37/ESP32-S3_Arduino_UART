@@ -34,6 +34,7 @@ bool serialHaveData()override;
 void UARTgetData()override;
 void UARTsendData()override;
 void printValues()override;
+void loggerSendData()override;
 };
 
 #endif

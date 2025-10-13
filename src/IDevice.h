@@ -2,7 +2,7 @@
 #define IDEVICE_H
 
 #include <Arduino.h>
-
+#include "accelGyro.h"
 
 class IDevice
 {
@@ -13,18 +13,6 @@ virtual void startSerial() = 0;
 virtual void startGyro() = 0;
 
 protected:
-
-struct vector3D
-{
-    int16_t x;
-    int16_t y;
-    int16_t z;
-};
-
-struct accelGyro{
-  vector3D accel;
-  vector3D gyro ;
-};
 
 accelGyro getAccelGyro;
 accelGyro sendAccelGyro;
@@ -42,7 +30,7 @@ virtual bool serialHaveData()=0;
 virtual void UARTgetData()=0;
 virtual void UARTsendData()=0;
 virtual void printValues()=0;
-
+virtual void loggerSendData()=0;
 };
 
 #endif
