@@ -44,9 +44,7 @@ void ESP32S3::startSerial()  {
 void ESP32S3::start() {
   spi.begin(disp.sclk, disp.miso, disp.mosi);
   spiSD.begin(sdPins.sck,sdPins.miso,sdPins.mosi);
-  startDisplay();
-  startGyro();
-	startSerial();
+  IDevice::start();
   logger.start(spiSD);
 }
 
