@@ -63,17 +63,17 @@ void SDLogger::updateDataLogFile(){
   dataFile.close();
 }
 
-void SDLogger::writeAccelGyroLog(String name, accelGyro accelGyro, float gyroDivider, float accelDivider){
+void SDLogger::writeAccelGyroLog(String name, accelGyro* accelGyro, float gyroDivider, float accelDivider){
   dataString+="\n";
   dataString+= name;
   dataString+=":\nGyroscope:\n";
-  dataString+="\tX "+ String(accelGyro.gyro.x/ gyroDivider);
-  dataString+=" Y "+ String(accelGyro.gyro.y/ gyroDivider);
-  dataString+=" Z "+ String(accelGyro.gyro.z/ gyroDivider);
+  dataString+="\tX "+ String(accelGyro->gyro.x/ gyroDivider);
+  dataString+=" Y "+ String(accelGyro->gyro.y/ gyroDivider);
+  dataString+=" Z "+ String(accelGyro->gyro.z/ gyroDivider);
   dataString+=":\nAccelerometr:\n";
-  dataString+="\tX "+ String(accelGyro.accel.x/ accelDivider);
-  dataString+=" Y "+ String(accelGyro.accel.y/ accelDivider);
-  dataString+=" Z "+ String(accelGyro.accel.z/ accelDivider);
+  dataString+="\tX "+ String(accelGyro->accel.x/ accelDivider);
+  dataString+=" Y "+ String(accelGyro->accel.y/ accelDivider);
+  dataString+=" Z "+ String(accelGyro->accel.z/ accelDivider);
 }
 
 void SDLogger::writeDivider(){

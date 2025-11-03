@@ -31,7 +31,7 @@ void updateDataLogFile();
 public:
 
 void start(SPIClass &spi);
-void writeAccelGyroLog(String name,accelGyro accelGyro, float gyroDivider, float accelDivider);
+void writeAccelGyroLog(String name,accelGyro* accelGyro, float gyroDivider, float accelDivider);
 void writeDivider();
 void sendData();
 };

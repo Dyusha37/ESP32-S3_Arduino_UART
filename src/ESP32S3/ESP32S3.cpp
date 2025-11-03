@@ -99,8 +99,8 @@ void ESP32S3::printValues(){
 
   display.drawRGBBitmap(0,0,canvas16.getBuffer(), canvas16.width(),canvas16.height());
   logger.writeDivider();
-  logger.writeAccelGyroLog("Arduino", getAccelGyro,131.0f,16384.0f);
-  logger.writeAccelGyroLog("ESP32", sendAccelGyro, 1.75f,980.0f);
+  logger.writeAccelGyroLog("Arduino", &getAccelGyro,131.0f,16384.0f);
+  logger.writeAccelGyroLog("ESP32", &sendAccelGyro, 1.75f,980.0f);
 }
 
 
